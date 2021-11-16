@@ -5,4 +5,8 @@ class QuotesController < Rulers::Controller
         # This shows the hash that is everything the application receives from rack
         "\n<pre>\n#{env}\n</pre>"
     end
+
+    def exception
+        raise StandardError
+    end
 end
