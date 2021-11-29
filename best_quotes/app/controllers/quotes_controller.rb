@@ -1,3 +1,5 @@
+# comment to test rerun
+
 class QuotesController < Rulers::Controller
     def a_quote
         "there is nothing either good or bad " +
