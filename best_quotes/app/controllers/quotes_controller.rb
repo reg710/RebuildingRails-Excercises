@@ -10,4 +10,16 @@ class QuotesController < Rulers::Controller
     def exception
         raise StandardError
     end
+
+    def quote_1
+        # quote_1 = Rulers::Model::FileModel.find(1)
+        # Updating the rulers controller to include Rulers Model makes it possible to shorten to just FileModel here
+        quote_1 = FileModel.find(1)
+        render :quote, :obj => quote_1
+    end
+
+    def index
+        quotes = FileModel.all
+        render :index, :quotes => quotes
+    end
 end
